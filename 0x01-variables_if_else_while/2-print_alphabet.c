@@ -1,37 +1,19 @@
 #include <stdio.h>
+
 /**
- * main - print numbers from 00 to 99.
-(*
- * Return: 0 on success
+ * main- Entry point
+ * @void: Null value
+ *
+ * Description: Print alphabet lowercase
+ * Return: Zero value
  */
+
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	char c;
 
-	while (i <= '9')
-	{
-		while (j <= '9')
-		{
-			putchar(i);
-			putchar(j);
-			if (j == '9' && i == '9')
-			{
-				putchar('\n');
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			j++;
-		}
-		if (j >= '9')
-		{
-			j = '0';
-		}
-		i++;
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	putchar('\n');
 	return (0);
 }
-
