@@ -1,32 +1,37 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - Check if a number.
- * @void: Null value
- *
- * Description: Print if a number is positive, negative or zero
- * Return: Zero value
+ * main - print numbers from 00 to 99.
+(*
+ * Return: 0 on success
  */
-
 int main(void)
 {
-	int n;
+	int i = '0';
+	int j = '0';
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+	while (i <= '9')
 	{
-		printf("%d is positive\n", n);
-	}
-	else if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	}
-	else
-	{
-		printf("%d is zero\n", n);
+		while (j <= '9')
+		{
+			putchar(i);
+			putchar(j);
+			if (j == '9' && i == '9')
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		if (j >= '9')
+		{
+			j = '0';
+		}
+		i++;
 	}
 	return (0);
 }
+
